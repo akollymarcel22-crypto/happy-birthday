@@ -9,12 +9,12 @@ body {
 
 .container {
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
   margin: 0 auto;
   text-align: center;
   visibility: hidden;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container div.six {
@@ -32,8 +32,6 @@ body {
 
 .container > div {
   position: absolute;
-  left: 0;
-  right: 0;
   top: 20vh;
 }
 
@@ -58,12 +56,8 @@ body {
 }
 
 .four .text-box {
-  width: 600px;
+  width: min(600px, 90%);
   margin: 0 auto;
-  border: 3px solid #aaa;
-  border-radius: 5px;
-  padding: 10px;
-  position: relative;
 }
 
 .text-box p {
@@ -126,13 +120,15 @@ body {
   position: absolute;
   width: 80px;
   top: -35px;
-  left: 41.5%;
+  left: 50%;
+  transform: translateX(-50%);
   /* transform: scale(0.1); */
 }
 
 .baloons img {
-  display: inline-block;
   position: absolute;
+  width: 60px;
+  height: auto;
 }
 
 .baloons img:nth-child(even) {
@@ -143,7 +139,7 @@ body {
   right: -10%;
 }
 
-.baloons img:nth-child(3n + 0) {
+.baloons img:nth-child(3n) {
   left: 30%;
 }
 
